@@ -1,7 +1,4 @@
-/**
- * @param {integer} init
- * @return { increment: Function, decrement: Function, reset: Function }
- */
+
 var createCounter = function (init) {
    let value = init;
 
@@ -9,5 +6,23 @@ var createCounter = function (init) {
       increment() { return ++value; },
       decrement() { return --value; },
       reset() { return (value = init); }
+   }
+};
+
+
+
+var createCounter = function (init) {
+   let count = init
+
+   return {
+      increment: function () {
+         return ++count
+      },
+      decrement: function () {
+         return --count
+      },
+      reset: function () {
+         return count = init
+      }
    }
 };
