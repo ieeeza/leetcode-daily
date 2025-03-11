@@ -1,8 +1,8 @@
-var longestPalindrome = function (s) {
+function longestPalindrome(s) {
     let res = '';
     for (let i = 0; i < s.length; i++) {
         let lOdd = i, rOdd = i;
-        expandAroundCenter(lOdd, rOdd)
+        expandAroundCenter(lOdd, rOdd);
         let lEven = i, rEven = i + 1;
         expandAroundCenter(lEven, rEven);
     }
@@ -18,4 +18,4 @@ var longestPalindrome = function (s) {
         }
     }
     return res;
-};
+}
